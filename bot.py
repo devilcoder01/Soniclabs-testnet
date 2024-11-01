@@ -158,8 +158,8 @@ def main():
             tx_hash, tx_receipt, sent_amount = send_transaction(to_address, amount)
 
             # Loại bỏ tiền tố "0x" từ hash giao dịch
-            tx_hash_no_prefix = tx_hash[2:]
-            tx_link = explorer_url + tx_hash_no_prefix  # Tạo liên kết txHash không có "0x"
+            
+            tx_link = explorer_url + tx_hash  # Tạo liên kết txHash không có "0x"
 
             # Định dạng số lượng S đã gửi
             formatted_amount = f"{sent_amount:.6f}"
